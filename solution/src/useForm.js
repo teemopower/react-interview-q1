@@ -66,9 +66,8 @@ const UserForm = () => {
           id="name"
           value={name}
           onChange={handleNameChange}
-          className={isNameTaken ? "error" : ""}
         />
-        {isNameTaken && (
+        {!isNameTaken && name.length > 0 && (
           <p className="error-message">This name has already been taken</p>
         )}
       </div>
